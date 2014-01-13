@@ -8,7 +8,8 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
 
 @end
 
@@ -18,8 +19,36 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(defaultsChanged:) name:NSUserDefaultsDidChangeNotification object:nil];
 }
 
+- (void)defaultsChanged:(NSNotification *)notification {
+    NSLog(@"CHANGE");
+    [self refreshName];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self refreshName];
+}
+
+- (void)refreshName {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *name = [defaults objectForKey:@"name_preference"];
+    
+    NSLog(@"name %@", name);
+    self.nameField.text = name;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    NSString *name = textField.text;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:name forKey:@"name_preference"];
+    [defaults synchronize];
+    
+    [textField resignFirstResponder];
+    return YES;
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

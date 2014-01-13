@@ -21,6 +21,7 @@
 		40A907D01883B2220042CE9A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A907B21883B2220042CE9A /* UIKit.framework */; };
 		40A907D81883B2220042CE9A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40A907D61883B2220042CE9A /* InfoPlist.strings */; };
 		40A907DA1883B2220042CE9A /* SettingTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A907D91883B2220042CE9A /* SettingTestTests.m */; };
+		40A907E41883B2510042CE9A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 40A907E31883B2510042CE9A /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		40A907D51883B2220042CE9A /* SettingTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SettingTestTests-Info.plist"; sourceTree = "<group>"; };
 		40A907D71883B2220042CE9A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		40A907D91883B2220042CE9A /* SettingTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingTestTests.m; sourceTree = "<group>"; };
+		40A907E31883B2510042CE9A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				40A907C41883B2220042CE9A /* ViewController.m */,
 				40A907C61883B2220042CE9A /* Images.xcassets */,
 				40A907B51883B2220042CE9A /* Supporting Files */,
+				40A907E31883B2510042CE9A /* Settings.bundle */,
 			);
 			path = SettingTest;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40A907E41883B2510042CE9A /* Settings.bundle in Resources */,
 				40A907C71883B2220042CE9A /* Images.xcassets in Resources */,
 				40A907B91883B2220042CE9A /* InfoPlist.strings in Resources */,
 				40A907C21883B2220042CE9A /* Main.storyboard in Resources */,
